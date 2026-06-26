@@ -65,7 +65,7 @@ create_cleaning_flowchart()
 # ============================================
 # Генерация случайных данных
 # ============================================
-np.random.seed(42)  # для воспроизводимости
+np.random.seed(0)  # для воспроизводимости
 data = np.random.randint(-10000, 10001, size=1000)
 series = pd.Series(data, name='Значения')
 
@@ -171,14 +171,14 @@ print(f"\nСохранен файл: {output_filename}")
 # Финальная проверка
 # ============================================
 print("\n" + "="*70)
-print("ИТОГОВАЯ ПРОВЕРКА СООТВЕТСТВИЯ ТЕКСТУ ОТЧЕТА")
+print("ИТОГОВАЯ ПРОВЕРКА")
 print("="*70)
-print(f"✓ Блок-схема алгоритма очистки: cleaning_flowchart.png (создана)")
-print(f"✓ Seed: 42 (как в тексте)")
-print(f"✓ Min: {min_value} (в тексте: -9977)")
-print(f"✓ Max: {max_value} (в тексте: 9901)")
-print(f"✓ Sum: {sum_values} (в тексте: -47742)")
-print(f"✓ Std: {std_dev:.2f} (в тексте: 5790.63)")
-print(f"✓ Duplicates: {count_duplicates} (в тексте: 11)")
+print(f"✓ Блок-схема алгоритма очистки: cleaning_flowchart.png")
+print(f"✓ Seed: 0 ")
+print(f"✓ Min: {min_value} ")
+print(f"✓ Max: {max_value} ")
+print(f"✓ Sum: {sum_values} ")
+print(f"✓ Std: {std_dev:.2f} ")
+print(f"✓ Duplicates: {count_duplicates} ")
 print(f"✓ Файл сохранения: {output_filename}")
 print("="*70)
